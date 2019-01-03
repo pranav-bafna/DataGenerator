@@ -1,0 +1,34 @@
+Coverage,Limit
+Bodily Injury Liability,15/30K
+Bodily Injury Liability,20/40K
+Bodily Injury Liability,50/100K
+Bodily Injury Liability,100/300K
+Bodily Injury Liability,100/500K
+Property Damage Liability,10K
+Property Damage Liability,25K
+Property Damage Liability,50K
+Property Damage Liability,100K
+Medical Payments,1K
+Medical Payments,2K
+Medical Payments,5K
+Medical Payments,10K
+Uninsured Motorist BI,15/30K
+Uninsured Motorist BI,20/40K
+Uninsured Motorist BI,50/100K
+Uninsured Motorist BI,100/300K
+Uninsured Motorist BI,100/500K
+Underinsured Motorist,15/30K
+Underinsured Motorist,20/40K
+Underinsured Motorist,50/100K
+Underinsured Motorist,100/300K
+Underinsured Motorist,100/500K
+Comprehensive,100K
+Comprehensive,500K
+Comprehensive,1000K
+Collision,100K
+Collision,500K
+Collision,1000K
+Rental Reimbursement,30Per Day/900 MAX
+Rental Reimbursement,45Per Day/1200 MAX
+Emergency Road Service,Yes
+Emergency Road Service,No
