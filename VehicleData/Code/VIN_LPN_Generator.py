@@ -57,10 +57,10 @@ def VIN_LPN_Gen():
         VIN_LPN_list.append([VIN,plates_5m[i]])
         i = i+1
 
-    writer = csv.writer(open(file_path, 'w'))
+    writer = csv.writer(open(file_path, 'w', newline = '\n'))
     writer.writerow(headers)
 
-    with open(file_path, 'a') as writeFile:
+    with open(file_path, 'a, 'newline = '\n') as writeFile:
         writer = csv.writer(writeFile)
         writer.writerows(VIN_LPN_list)
         writeFile.close()
