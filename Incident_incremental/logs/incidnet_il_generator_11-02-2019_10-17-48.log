@@ -1,0 +1,6 @@
+2019-02-11 22:17:48.561 DEBUG incident_incremental - <module>: Incident incremental data generation is started.
+2019-02-11 22:17:48.922 DEBUG incident_incremental - generate_incident: Connected to: postgresql://data:gen123@10.20.202.43:5432/datagen
+2019-02-11 22:18:06.167 DEBUG incident_incremental - generate_incident: Data loaded
+2019-02-11 22:18:06.173 DEBUG incident_incremental - generate_incident: Table incident_il already exists!
+2019-02-11 22:18:06.185 DEBUG truncate_table - truncate: Table incident_il truncated.
+2019-02-11 22:18:06.204 DEBUG incident_incremental - generate_incident: Table incident_il created and 14 records written.

@@ -16,7 +16,7 @@ try:
 
 	#Importing configuration file
 	sys.path.insert(0, "../Config")
-	import Config_coverage_il as Cconf
+	import Config_incident_il as iconf
 
 except Exception,e:
 	print(str(e))
@@ -25,7 +25,7 @@ except Exception,e:
 
 def truncate(table_name):
 	try:
-		engine = create_engine(Cconf.connection_string)
+		engine = create_engine(iconf.connection_string)
 		connection = engine.connect()
 		truncate_query = text("DROP TABLE "+table_name)
 		connection.execution_options(autocommit=True).execute(truncate_query)

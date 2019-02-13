@@ -1,0 +1,9 @@
+2019-02-11 22:07:43.764 DEBUG coverage_incremental_load - <module>: Coverage incremental data generation is started.
+2019-02-11 22:07:44.119 DEBUG coverage_incremental_load - <module>: Connected to: postgresql://data:gen123@10.20.202.43:5432/datagen
+2019-02-11 22:07:49.111 DEBUG coverage_incremental_load - append_new_policy: Data loaded.
+2019-02-11 22:07:49.903 DEBUG coverage_incremental_load - append_new_policy: 79 new records created.
+2019-02-11 22:07:50.188 DEBUG coverage_incremental_load - change_coverage_limit: 4 records' limits updated.
+2019-02-11 22:07:50.816 DEBUG coverage_incremental_load - main: Table coverage_il already exists!
+2019-02-11 22:07:50.826 DEBUG truncate_table - truncate: Table coverage_il truncated.
+2019-02-11 22:07:50.857 DEBUG coverage_incremental_load - main: 3 records modified.
+2019-02-11 22:07:50.857 DEBUG coverage_incremental_load - main: Table coverage_il created and 86 total records written.
