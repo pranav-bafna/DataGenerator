@@ -1,0 +1,14 @@
+2019-02-11 01:55:45.358 DEBUG claims_financial_data - <module>: Generation of claim finance data script started executing...
+2019-02-11 01:55:45.999 DEBUG claims_financial_data - main: Traceback (most recent call last):
+  File "claims_financial_data.py", line 105, in main
+    df.to_sql(cfc.table_name, engine, index=False)
+  File "/usr/lib64/python2.7/site-packages/pandas/core/generic.py", line 2130, in to_sql
+    dtype=dtype)
+  File "/usr/lib64/python2.7/site-packages/pandas/io/sql.py", line 450, in to_sql
+    chunksize=chunksize, dtype=dtype)
+  File "/usr/lib64/python2.7/site-packages/pandas/io/sql.py", line 1126, in to_sql
+    table.create()
+  File "/usr/lib64/python2.7/site-packages/pandas/io/sql.py", line 563, in create
+    raise ValueError("Table '%s' already exists." % self.name)
+ValueError: Table 'claims_financial' already exists.
+

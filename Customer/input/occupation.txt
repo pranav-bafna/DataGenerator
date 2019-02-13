@@ -1,0 +1,62 @@
+Dentist-2173
+Insurance/Underwriter-139
+Engineer-80307
+Professional_Driver-2555
+Executive_Administrator-12832
+Upper_Management_Executive-4102
+Work_From_Home-5509
+Chiropractor-525
+Computer Professional-179
+Editors-29
+Insurance_Underwriter-4339
+Computer_Professional-11434
+Skilled_Trade_Machine_Laborer-19544
+Clergy-5048
+Military-3665
+Electrician-2453
+Teacher-Educator-830
+Interior_Designer-893
+Surveyor-213
+Public Lecturers-221
+Sales-Marketing-270
+Publishers-18
+Politicians-43
+Real_Estate_Agent-17437
+Middle_Management-26415
+Beauty-1662
+Audiologist-255
+Real Estate Agent-444
+Retail Sales-77
+Counselor-2892
+Veterinarian-559
+Skilled Trade-Machine Laborer-42
+Middle Management-515
+Professional-Technical-272
+Physical Therapist-24
+Authors-269
+Fireman_Policeman-4116
+Professional_Technical-13533
+Architect-2606
+Pharmacist-3202
+Landscape_Architect-1223
+Work From Home-97
+Executive-Administrator-198
+Financial_Services-11403
+Accountants-16542
+Physical_Therapist-1592
+Retail_Sales-6435
+Farming_Agriculture-1146
+Professional Driver-18
+Political Activist-63
+Professional Athletes-3
+Landscape Architect-5
+Physicians-7885
+Sales_Marketing-24327
+Nurse-14043
+Teacher_Educator-34653
+Social Worker-4287
+Interior Designer-28
+Financial Services-569
+Upper Management-Executive-113
+Farming-Agriculture-18
+Radio and TV Broadcasters-93

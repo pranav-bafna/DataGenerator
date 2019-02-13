@@ -1,0 +1,6 @@
+2019-02-11 02:38:57.123 DEBUG tables_to_json - <module>: Table to json script started executing
+2019-02-11 02:38:57.406 DEBUG tables_to_json - <module>: Traceback (most recent call last):
+  File "tables_to_json.py", line 23, in <module>
+    import database_credentials as dc
+ImportError: No module named database_credentials
+

@@ -1,0 +1,7 @@
+2019-02-11 01:54:21.343 DEBUG claims_financial_data - <module>: Generation of claim finance data script started executing...
+2019-02-11 01:54:21.758 DEBUG claims_financial_data - main: Traceback (most recent call last):
+  File "claims_financial_data.py", line 53, in main
+    select = text("select * from " + cfc.exposure_table)
+NameError: global name 'text' is not defined
+
+2019-02-11 01:54:21.758 DEBUG claims_financial_data - main: Error: global name 'text' is not defined

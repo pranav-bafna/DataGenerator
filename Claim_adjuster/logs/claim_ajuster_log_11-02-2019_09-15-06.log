@@ -1,0 +1,7 @@
+2019-02-11 21:15:06.640 INFO claims_contact_data - <module>: Generation of claim adjuster data script started executing...
+2019-02-11 21:15:07.020 INFO claims_contact_data - <module>: Successfully imported all the required modules
+2019-02-11 21:15:07.040 INFO claims_contact_data - main: In main function
+2019-02-11 21:15:07.040 INFO claims_contact_data - main: Reading unique ID csv to get unique contact id's
+2019-02-11 21:15:07.292 INFO claims_contact_data - main: Read unique ID file successfully
+2019-02-11 21:16:03.284 INFO claims_contact_data - main: Successfully generated required claims adjuster data
+2019-02-11 21:16:06.137 INFO claims_contact_data - main: Successfully loaded 20000claims adjuster records in postgres

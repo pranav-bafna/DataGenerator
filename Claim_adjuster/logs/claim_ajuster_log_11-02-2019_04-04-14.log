@@ -1,0 +1,14 @@
+2019-02-11 04:04:14.847 INFO claims_contact_data - <module>: Generation of claim adjuster data script started executing...
+2019-02-11 04:05:18.512 INFO claims_contact_data - main: Traceback (most recent call last):
+  File "claims_contact_data.py", line 137, in main
+    df.to_sql(ccc.table_name, engine, index=False)
+  File "/usr/lib64/python2.7/site-packages/pandas/core/generic.py", line 2130, in to_sql
+    dtype=dtype)
+  File "/usr/lib64/python2.7/site-packages/pandas/io/sql.py", line 450, in to_sql
+    chunksize=chunksize, dtype=dtype)
+  File "/usr/lib64/python2.7/site-packages/pandas/io/sql.py", line 1126, in to_sql
+    table.create()
+  File "/usr/lib64/python2.7/site-packages/pandas/io/sql.py", line 563, in create
+    raise ValueError("Table '%s' already exists." % self.name)
+ValueError: Table 'claims_adjuster' already exists.
+

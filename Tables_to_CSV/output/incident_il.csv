@@ -1,0 +1,14 @@
+incident_id,incident_vin,is_the_vehicle_driveable,driver,inc_desc
+INC01-1000026857,859A9B11B7B44FF8,insured vehicle was rear ended by other vehicle  which caused insured vehicle to hit other vehicle2  which caused other vehicle2 to rear end other vehicle3,Daughter,Y
+INC01-1000026858,13B0BD1818EF453D,insured vehicle backed into gate,Self,Y
+INC01-1000026859,67F5D3685F564A3F,insured vehicle collided with object on the road,Son,Y
+INC01-1000026860,6A3B5D07B37A4B05,insured vehicle struck by unknown other vehicle,Daughter,Y
+INC01-1000026861,1C62033142684A7A,insured vehicle hit parked other vehicle,Sister,Y
+INC01-1000026862,5077FD81CE9D42BD,insured vehicle pulled in front of ambulance,Father,Y
+INC01-1000026863,98CD82EE8B594BF0,insured vehicle went into parking lot and hit a pole,Third Party,
+INC01-1000026864,1977993C47BE4EC4,insured vehicle was backing up and other vehicle was backing up. Insured vehicle and other vehicle backed into each other.,Sister,Y
+INC01-1000026865,D7D59A44EEBD434D,Insured vehicle parked  came out to rear driver side dented and scratched,Sister,
+INC01-1000026866,BD3FB34E90A6433D,Insured vehicle parked and was hit by other vehicle,Spouse,Y
+INC01-100026867,B315ECBE526141B0,I v was turning left and other vehicle continuing straight when collidedision occurred.,Father,
+INC01-100026868,90B6D8FAAB7C438D,Other vehicle stopped suddenly and insured vehicle r/e other vehicle,Sister,
+INC01-100026869,DA9EF6D60E344745,Other vehicle hit insured vehicle while switching lanes at a rapid pace,Daughter,Y
