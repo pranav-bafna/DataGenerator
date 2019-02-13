@@ -15,3 +15,4 @@ max_car_age = 10
 min_car_mileage = 8
 max_car_mileage = 18
 output_table_name = 'vehicle'
+connection_string = 'postgresql://data:gen123@10.20.202.43:5432/datagen'

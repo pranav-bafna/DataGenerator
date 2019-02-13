@@ -1,0 +1,10 @@
+2019-02-10 22:30:36.817 DEBUG DataGenerator - <module>: Vehicle data generation is started.
+2019-02-10 22:30:37.119 DEBUG DataSplitter - <module>: Vehicle data splitting is started.
+2019-02-10 22:30:37.138 DEBUG DataSplitter - split: 9297 records processed!
+2019-02-10 22:30:37.143 DEBUG DataSplitter - split: 7327 records written to ../Input/othercars_make_model.csv
+2019-02-10 22:30:37.144 DEBUG DataSplitter - split: 1969 records written to ../Input/expcars_make_model.csv
+2019-02-10 22:30:42.056 DEBUG DataGenerator - Generate: Data imported.
+2019-02-10 22:33:31.320 DEBUG DataGenerator - Generate: Connected to: postgresql://data:gen123@10.20.202.43:5432/datagen
+2019-02-10 22:33:31.329 DEBUG DataGenerator - Generate: Table vehicle already exists!
+2019-02-10 22:33:31.344 DEBUG truncate_table - truncate: Table vehicle truncated.
+2019-02-10 22:33:45.712 DEBUG DataGenerator - Generate: vehicle table created and 100000 records written
