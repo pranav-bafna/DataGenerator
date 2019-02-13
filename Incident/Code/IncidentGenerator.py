@@ -1,73 +1,127 @@
-import csv
+import os
 import time
-import sys
-import numpy
-import random
-import psycopg2
-import pandas as pd
-from sqlalchemy import create_engine, text
+import logging
+import traceback
 
-#Import file truncate
-import truncate_table as tt
+if not os.path.exists(r'../logs'):
+	os.makedirs(r'../logs')
 
-#Importing configuration file
-sys.path.insert(0, "../Config")
-import Config_incident as Iconf
+timestamp = time.strftime("%d-%m-%Y_%I-%M-%S")
+log_file = "../logs/incident_data_generator_" + timestamp + ".log"
+logging.basicConfig(filename=log_file,level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s %(module)s - %(funcName)s: %(message)s', datefmt="%Y-%m-%d %H:%M:%S")
+logging.debug("Incident data generation is started.")
 
-i=1
-id = '0'
-VIN_list = []
-incident_list = []
-relations = ["Self", "Spouse", "Brother", "Sister", "Mother", "Father", "Son", "Daughter", "Third Party"]
+try:
+	import csv
+	import time
+	import sys
+	import numpy
+	import random
+	import psycopg2
+	import pandas as pd
+	from sqlalchemy import create_engine, text
 
-#Connect to postgres
-engine = create_engine('postgresql://data:gen123@10.20.202.43:5432/datagen')
-db_connection = engine.connect()
+	#Import file truncate
+	import truncate_table as tt
 
-#Load coverage table
-select = text("SELECT * FROM coverage")
-result = db_connection.execute(select)
-VIN_list = pd.DataFrame(list(result), columns = result.keys())['vin'].unique().tolist()
-num_rec = random.randint(len(VIN_list)-20000, len(VIN_list))
+	#Importing configuration file
+	sys.path.insert(0, "../Config")
+	import Config_incident as Iconf
 
-#Load incident descriptions
-reader = csv.reader(open(Iconf.inc_des_path))
-incident_desc_list = list(reader)
+except Exception,e:
+	print(str(e))
+	logging.debug(traceback.format_exc())
+	exit()
 
-start = time.time()
+def generate_incidents():
+	i=1
+	id = '0'
+	VIN_list = []
+	incident_list = []
+	relations = ["Self", "Spouse", "Brother", "Sister", "Mother", "Father", "Son", "Daughter", "Third Party"]
 
-while(i <= num_rec):
-    val=5-len(str(i))
-    inc_incident_id = "INC01-1"+id*val+str(i)
-    value = random.randint(0,len(VIN_list))
+	try:
+		#Connect to postgres
+		engine = create_engine(Iconf.connection_string)
+		db_connection = engine.connect()
+		logging.debug("Connected to: "+Iconf.connection_string)
 
-    if value == len(VIN_list):
-	value = value - 1
+	except Exception,e:
+		print(str(e))
+		logging.debug(traceback.format_exc())
+		exit()
 
-    inc_vehicle_id = VIN_list[value] 
-    VIN_list.pop(value)
+	try:
+		#Load coverage table
+		select = text("SELECT * FROM coverage")
+		result = db_connection.execute(select)
+		reader_coverage_data = pd.DataFrame(list(result), columns = result.keys())
+		VIN_list = reader_coverage_data[reader_coverage_data['coverage_status'] == 'Active']['vin'].unique().tolist()
+		num_rec = random.randint(len(VIN_list)-20000, len(VIN_list))
 
-    incident_desc = random.choice(incident_desc_list)
+		#Load incident descriptions
+		reader = csv.reader(open(Iconf.inc_des_path))
+		incident_desc_list = list(reader)
+		logging.debug("Data loaded.")
 
-    driver = random.choice(relations)
+	except Exception,e:
+		print(str(e))
+		logging.debug(traceback.format_exc())
+		exit()
 
-    inc_is_the_vehicle_driveable = numpy.random.choice(["Y",""],p = [0.8,0.2])
+	start = time.time()
 
-    incident_list.append([inc_incident_id, inc_vehicle_id, incident_desc[0], driver, inc_is_the_vehicle_driveable])
+	try:
+		while(i <= num_rec):
+		    val=5-len(str(i))
+		    inc_incident_id = "INC01-1"+id*val+str(i)
+		    value = random.randint(0,len(VIN_list))
 
-    i = i + 1
+		    if value == len(VIN_list):
+			value = value - 1
 
+		    inc_vehicle_id = VIN_list[value] 
+		    VIN_list.pop(value)
 
-print("Generate: "+str(time.time()-start))
+		    incident_desc = random.choice(incident_desc_list)
 
-#Truncate table if exists
-if engine.dialect.has_table(engine, Iconf.table_name):
-	tt.truncate(Iconf.table_name)
+		    driver = random.choice(relations)
 
-#Create table with the specified columns
-df = pd.DataFrame.from_records(incident_list, columns=Iconf.headers)
+		    inc_is_the_vehicle_driveable = numpy.random.choice(["Y",""],p = [0.8,0.2])
 
-#Load to database
-df.to_sql(Iconf.table_name, engine, index=False)
+		    incident_list.append([inc_incident_id, inc_vehicle_id, incident_desc[0], driver, inc_is_the_vehicle_driveable])
 
-print(str(i)+" Records Generated and loaded to DB!")
+		    i = i + 1
+
+	except Exception,e:
+		print(str(e))
+		logging.debug(traceback.format_exc())
+		exit()
+
+	print("Generate: "+str(time.time()-start))
+
+	#Truncate table if exists
+	if engine.dialect.has_table(engine, Iconf.table_name):
+		logging.debug("Table "+Iconf.table_name+" already exists!")
+		tt.truncate(Iconf.table_name)
+
+	try:
+		#Create table with the specified columns
+		df = pd.DataFrame.from_records(incident_list, columns=Iconf.headers)
+
+		#Load to database
+		df.to_sql(Iconf.table_name, engine, index=False)
+		logging.debug(Iconf.table_name+" created and "+str(len(incident_list))+" records written.")
+
+	except Exception,e:
+		print(str(e))
+		logging.debug(traceback.format_exc())
+		exit()
+	
+	print(str(i)+" Records Generated and loaded to DB!")
+
+def main():
+	generate_incidents()
+	
+if __name__ == "__main__":
+	main()

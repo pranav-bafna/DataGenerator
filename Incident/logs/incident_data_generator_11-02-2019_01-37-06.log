@@ -1,0 +1,6 @@
+2019-02-11 01:37:06.960 DEBUG IncidentGenerator - <module>: Incident data generation is started.
+2019-02-11 01:37:07.386 DEBUG IncidentGenerator - generate_incidents: Connected to: postgresql://data:gen123@10.20.202.43:5432/datagen
+2019-02-11 01:37:08.188 DEBUG IncidentGenerator - generate_incidents: Data loaded.
+2019-02-11 01:37:09.159 DEBUG IncidentGenerator - generate_incidents: Table incidents already exists!
+2019-02-11 01:37:09.170 DEBUG truncate_table - truncate: Table incidents truncated.
+2019-02-11 01:37:12.380 DEBUG IncidentGenerator - generate_incidents: incidents created and 23827 records written.

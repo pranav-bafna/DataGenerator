@@ -1,0 +1,4 @@
+Closed with payments
+Closed without payment
+Duplicate
+Rejected

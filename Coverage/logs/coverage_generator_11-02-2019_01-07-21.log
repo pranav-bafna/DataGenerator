@@ -1,0 +1,11 @@
+2019-02-11 01:07:21.151 DEBUG coverage_generator - <module>: Coverage data generation is started.
+2019-02-11 01:07:21.553 DEBUG coverage_limit_generator - <module>: Coverage limits generation is started.
+2019-02-11 01:07:21.582 DEBUG coverage_limit_generator - generate_coverage_list: Connected to: postgresql://data:gen123@10.20.202.43:5432/datagen
+2019-02-11 01:07:21.591 DEBUG coverage_limit_generator - generate_coverage_list: Table coverage_limit already exists!
+2019-02-11 01:07:21.601 DEBUG truncate_table - truncate: Table coverage_limit truncated.
+2019-02-11 01:07:21.620 DEBUG coverage_limit_generator - generate_coverage_list: coverage_limit created and 35 records written.
+2019-02-11 01:07:21.627 DEBUG coverage_generator - generate_coverage: Connected to: postgresql://data:gen123@10.20.202.43:5432/datagen
+2019-02-11 01:07:25.710 DEBUG coverage_generator - generate_coverage: Data loaded.
+2019-02-11 01:34:43.151 DEBUG coverage_generator - generate_coverage: Table coverage already exists!
+2019-02-11 01:34:43.163 DEBUG truncate_table - truncate: Table coverage truncated.
+2019-02-11 01:34:59.025 DEBUG coverage_generator - generate_coverage: Table coverage created and 103045 records written.

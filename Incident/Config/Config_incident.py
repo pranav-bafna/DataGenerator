@@ -4,3 +4,4 @@
 headers = ["incident_id", "incident_vin", "incident_desc","driver", "is_the_vehicle_driveable"]
 inc_des_path = '../Input/inc_sample_desc.csv'
 table_name = 'incidents'
+connection_string = 'postgresql://data:gen123@10.20.202.43:5432/datagen'

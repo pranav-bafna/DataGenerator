@@ -1,0 +1,3 @@
+2019-02-11 01:06:57.383 DEBUG coverage_generator - <module>: Coverage data generation is started.
+2019-02-11 01:06:57.731 DEBUG coverage_limit_generator - <module>: Coverage limits generation is started.
+2019-02-11 01:06:57.887 DEBUG coverage_limit_generator - generate_coverage_list: Connected to: postgresql://data:gen123@10.20.202.43:5432/datagen
